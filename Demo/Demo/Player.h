@@ -9,8 +9,7 @@ using namespace std;
 class Player : public Char
 {
 public:
-	using Char::Char;
-	explicit Player(string id, double speed, string filename, TileMap& in_level) : Char(id, speed, filename, in_level) {};
+	Player(string id, double speed, string filename, TileMap& in_level) : Char(id, speed, filename, in_level) {};
 	void run(char dir); //move the player character in a direction
 };
 
