@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1979176981617466}
+  m_IsPrefabParent: 1
+--- !u!1 &1979176981617466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4226885289662682}
+  - component: {fileID: 114732042464632964}
+  - component: {fileID: 114839439811106360}
+  m_Layer: 0
+  m_Name: GameMngr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4226885289662682
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979176981617466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114732042464632964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979176981617466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abab619da1b774d83ac24231c13cc049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cols: 8
+  rows: 8
+  wall_count:
+    min: 5
+    max: 9
+  item_count:
+    min: 1
+    max: 5
+  floor_tiles:
+  - {fileID: 1691158376087684, guid: 06b6a9f3750bf4006a60f00229d9e3ec, type: 2}
+  - {fileID: 1091354659465388, guid: 310bc34d5e89540719bc5bcf3ba5e04b, type: 2}
+  - {fileID: 1409745416580412, guid: 91dea51322ce043bb83add34c77037f4, type: 2}
+  wall_tiles:
+  - {fileID: 1430701922257778, guid: 547896f6d56d14b77bd78d71d286593f, type: 2}
+  item_tiles:
+  - {fileID: 1219946684036938, guid: 34fbabb3bafe54e4abc4143672785a3a, type: 2}
+--- !u!114 &114839439811106360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979176981617466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e1060d3639f4e709b51efc8a77b12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  board_script: {fileID: 0}
