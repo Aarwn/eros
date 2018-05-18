@@ -19,9 +19,9 @@ public class BoardMngr : MonoBehaviour {
 		}
 	}
 
-	public int cols = 8;
-	public int rows = 8;
-	public Count wall_count = new Count(5,9);
+	public int cols = 4;
+	public int rows = 4;
+	public Count wall_count = new Count(1,2);
 	public Count item_count = new Count(1,5);
 		
 	public GameObject[] floor_tiles;
@@ -51,16 +51,16 @@ public class BoardMngr : MonoBehaviour {
 		board_holder = new GameObject("Board").transform;
 		for (int x = -1; x < cols + 1; x++)
 		{
-			for (int y = -1; x < rows + 1; y++)
+			for (int y = -1; y < rows + 1; y++)
 			{
 				GameObject to_instantiate = floor_tiles[Random.Range(0, floor_tiles.Length)];
 				if (x == -1 || x == cols || y == -1 || y == rows)
-				{
 					to_instantiate = wall_tiles[Random.Range(0, wall_tiles.Length)];
-					GameObject instance = Instantiate(to_instantiate, new Vector3(x,y,0f), Quaternion.identity) as GameObject;
+				
+				GameObject instance = Instantiate(to_instantiate, new Vector3(x,y,0f), Quaternion.identity) as GameObject;
 
-					instance.transform.SetParent(board_holder);
-				}
+				instance.transform.SetParent(board_holder);
+					
 			}
 		}
 	}
