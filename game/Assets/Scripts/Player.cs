@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework.Interfaces;
 using UnityEngine;
 
 public class Player : Movable
@@ -17,18 +16,18 @@ public class Player : Movable
 	protected override void Start ()
 	{
 		animator = GetComponent<Animator>();
-//		items = GameMngr.instance.player_item_points;
+        items = GameMngr.instance.player_item_points;
 	}
 
 	private void OnDisable()
 	{
-//		GameMngr.instance.player_item_points = items;
+        GameMngr.instance.player_item_points = items;
 	}
 
 	// Update is called once per frame
 	void Update () 
 	{
-//		if (!GameMngr.instance.players_turn) return;
+		if (!GameMngr.instance.players_turn) return;
 
 		int horizontal = 0;
 		int vertical = 0;
@@ -51,7 +50,7 @@ public class Player : Movable
 		RaycastHit2D hit;
 		CheckIfGameOver();
 
-//		GameMngr.instance.players_turn = false;
+		GameMngr.instance.players_turn = false;
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -76,7 +75,7 @@ public class Player : Movable
 	
 	private void CheckIfGameOver()
 	{
-//		if (items <= 0)
-//			GameMngr.instance.GameOver();
+		if (items <= 0)
+			GameMngr.instance.GameOver();
 	}
 }
