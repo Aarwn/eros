@@ -10,13 +10,16 @@ public class Player : Movable
 	public float restart_lvl_delay = 1f;
 
 	private Animator animator;
+	private SpriteRenderer sprite_rndr;
 	private int items;
 	
 	// Use this for initialization
 	protected override void Start ()
 	{
 		animator = GetComponent<Animator>();
+		sprite_rndr = GetComponent<SpriteRenderer>();
         items = GameMngr.instance.player_item_points;
+		base.Start();
 	}
 
 	private void OnDisable()
@@ -45,12 +48,18 @@ public class Player : Movable
 	protected override void AttemptMove<T>(int xdir, int ydir)
 	{
 		items--;
+
+		if (xdir < 0)
+			sprite_rndr.flipX = true;
+		else if (xdir > 0)
+			sprite_rndr.flipY = false;
 		animator.SetTrigger("player_right");
 		base.AttemptMove<T>(xdir,ydir);
 		RaycastHit2D hit;
 		CheckIfGameOver();
 
 		GameMngr.instance.players_turn = false;
+		animator.ResetTrigger("player_right");
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
