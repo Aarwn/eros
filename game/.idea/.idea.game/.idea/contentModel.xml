@@ -7,6 +7,10 @@
       <e p="Assets/Scripts" t="Include">
         <e p="BoardMngr.cs" t="Include" />
         <e p="GameMngr.cs" t="Include" />
+        <e p="Loader.cs" t="Include" />
+        <e p="Movable.cs" t="Include" />
+        <e p="Player.cs" t="Include" />
+        <e p="Wall.cs" t="Include" />
       </e>
       <e p="game.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

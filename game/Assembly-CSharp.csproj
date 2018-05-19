@@ -55,6 +55,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BoardMngr.cs" />
     <Compile Include="Assets\Scripts\GameMngr.cs" />
+    <Compile Include="Assets\Scripts\Loader.cs" />
+    <Compile Include="Assets\Scripts\Movable.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Wall.cs" />
     <Reference Include="UnityEngine.UIAutomation">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
     </Reference>
